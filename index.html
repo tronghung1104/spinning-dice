@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title></title>
+	<style>
+		body{
+			background: #010101;
+			height: 100vh;
+			text-align: center;
+		}
+
+		img{
+			height: 200px;
+			width: 200px;
+		}
+
+		.container{
+			height: 100%;
+			margin-top: 100px;
+		}
+
+		.dice{
+			position: relative;
+			margin: 0 auto;
+			height: 200px;
+			width: 200px;
+			transform-style: preserve-3d;
+			animation: spin 10s infinite alternate;
+		}
+		@keyframes spin{
+			from,to:{transform: rotateX(0deg) rotateY(0deg);}
+			16%		{transform: rotateY(-90deg);}
+			33%		{transform: rotateY(-90deg) rotateZ(90deg);}
+			50%		{transform: rotateY(-180deg) rotateZ(90deg);}
+			66%		{transform: rotateY(90deg) rotateX(90deg);}
+			83%		{transform: rotateX(90deg);}
+			
+		}
+
+		.side{
+			position: absolute;
+			height: 200px;
+			width: 200px;
+			opacity: 0.9;
+			background: white;
+			border: 2px solid black;
+
+		}
+
+		.one{
+			transform: translateZ(100px);
+			background: #ff5;
+		}
+
+		.two{
+			transform: rotateY(90deg) translateZ(100px);
+			background: #f5f;
+		}
+
+		.three{
+			 transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
+			 background: #5ff;
+		}
+
+		.four{
+			transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
+			background: #55f;
+		}
+
+		.five{
+			transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
+			background: #5f5;
+		}
+
+		.six{
+			transform: rotateX(-90deg) translateZ(100px);
+			background: #f55;
+		}
+
+
+
+	</style>
+	</head>
+	<body>
+
+	<div class="container">
+		<div class="dice">
+			<div class="side one"><img src="1.png"></div>
+			<div class="side two"><img src="2.png"></div>
+			<div class="side three"><img src="3.png"></div>
+			<div class="side four"><img src="4.png"></div>
+			<div class="side five"><img src="5.png"></div>
+			<div class="side six"><img src="6.png"></div>
+		</div>
+		</div>
+
+	</body>
+</html>
